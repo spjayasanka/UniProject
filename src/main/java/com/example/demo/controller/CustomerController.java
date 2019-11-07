@@ -18,10 +18,8 @@ public class CustomerController {
 
     @PostMapping(value = "/saveCustomer")
     public void saveCustomer(@RequestBody CustomerDTO dto) {
-        //System.out.println(dto.getAddress());
+        System.out.println(dto.toString());
         customerService.saveCustomer(dto);
-
-
     }
 
     @GetMapping(value = "/getAllCustomers")

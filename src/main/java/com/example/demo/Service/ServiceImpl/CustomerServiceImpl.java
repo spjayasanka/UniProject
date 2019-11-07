@@ -26,9 +26,6 @@ public class CustomerServiceImpl implements CustomerService {
         customer.setPassword(dto.getPassword());
         customer.setAddress(dto.getAddress());
         customer.setPhone(dto.getPhone());
-
-        customer.setFirstname(dto.getFirstname());
-
         customerRepo.save(customer);
     }
 
