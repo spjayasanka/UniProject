@@ -31,8 +31,15 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<Customer> getAllCustomers() {
+
         return (List<Customer>) customerRepo.findAll();
     }
+
+//    @Override
+//    public List findCustomerByName() {
+//        return null;
+//    }
+
 
     @Override
     public void deleteAllCustomers() {

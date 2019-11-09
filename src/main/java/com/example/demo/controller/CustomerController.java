@@ -27,6 +27,11 @@ public class CustomerController {
         return customerService.getAllCustomers();
     }
 
+//    @GetMapping(value = "/findCustomerByName")
+//    public Customer findCustomerByName(){
+//        return customerService.
+//    }
+
     @DeleteMapping(value = "/deleteAllCustomers")
     public void deleteAllCustomers(){
         customerService.deleteAllCustomers();
@@ -34,7 +39,7 @@ public class CustomerController {
 
     @DeleteMapping(value = "/deleteCustomerById")
     public void deleteById(){
-        int deleted = 0;
+        int deleted = 37;
         customerService.deleteById(deleted);
     }
 

@@ -6,9 +6,12 @@ import com.example.demo.Service.DesignerService;
 import com.example.demo.dto.DesignerDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.transaction.Transactional;
 import java.util.List;
+
 
 @Service
 @Transactional
@@ -44,6 +47,21 @@ public class DesignerServiceImpl implements DesignerService {
     public void deleteById(Integer id) {
         designerRepo.deleteById(id);
     }
+
+    @Override
+    public Designer findByName(String firstname) {
+        return designerRepo.findByFirstname(firstname);
+    }
+
+//    @Override
+//    public ModelAndView findByName(@RequestParam String firstname) {
+//        ModelAndView mv = new ModelAndView("");
+//        Designer designer = (Designer) designerRepo.findByName("sanjeewa");
+//        System.out.println(designerRepo.findByName("sanjeewa"));
+//        mv.addObject(designer);
+//        return mv;
+//    }
+
 
 
 }
